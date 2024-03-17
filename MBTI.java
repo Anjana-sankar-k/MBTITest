@@ -90,5 +90,22 @@ public class MBTI{
             System.out.println("Invalid MBTI");
         }
     }
+    
+    public double RowAvg(int row) {
+        int sum = 0;
+        if (row >= 0 && row < 5) {
+            for (int j = 0; j < 5; j++) {
+                sum += answers[row][j];
+            }
+        }
+        return ((double)sum/5);
+    }
+
+    public void calc_Score(){
+        int j = 0;
+        for (int i = 0; i < 5; i++) {
+            Scores[j++] = RowAvg(i);
+        }
+    }
 }
 
