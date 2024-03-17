@@ -91,32 +91,32 @@ public class MBTI{
         }
     }
 
-    void display_MBTI(double scores[]) {
+    void display_MBTI() {
     
     StringBuilder result = new StringBuilder();
         // Energy score
-        if (scores[0] > 2.5) {
+        if (Scores[0] > 2.5) {
             result.append("E");
         } else {
             result.append("I");
         }
 
         // Sensing score
-        if (scores[1] > 2.5) {
+        if (Scores[1] > 2.5) {
             result.append("N");
         } else {
             result.append("S");
         }
 
         // Thinking score
-        if (scores[2] > 2.5) {
+        if (Scores[2] > 2.5) {
             result.append("T");
         } else {
             result.append("F");
         }
 
         // Judging score
-        if (scores[3] > 2.5) {
+        if (Scores[3] > 2.5) {
             result.append("P");
         } else {
             result.append("J");
