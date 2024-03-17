@@ -90,22 +90,49 @@ public class MBTI{
             System.out.println("Invalid MBTI");
         }
     }
+
+    void display_MBTI(double scores[]) {
     
-    public double RowAvg(int row) {
-        int sum = 0;
-        if (row >= 0 && row < 5) {
-            for (int j = 0; j < 5; j++) {
-                sum += answers[row][j];
-            }
+    StringBuilder result = new StringBuilder();
+        // Energy score
+        if (scores[0] > 2.5) {
+            result.append("E");
+        } else {
+            result.append("I");
         }
-        return ((double)sum/5);
+
+        // Sensing score
+        if (scores[1] > 2.5) {
+            result.append("N");
+        } else {
+            result.append("S");
+        }
+
+        // Thinking score
+        if (scores[2] > 2.5) {
+            result.append("T");
+        } else {
+            result.append("F");
+        }
+
+        // Judging score
+        if (scores[3] > 2.5) {
+            result.append("P");
+        } else {
+            result.append("J");
+        }
+
+        System.out.println("Your personality type is " + result);
     }
 
-    public void calc_Score(){
-        int j = 0;
-        for (int i = 0; i < 5; i++) {
-            Scores[j++] = RowAvg(i);
-        }
+    //Main function
+     public static void main(String[] args){
+        MBTI user = new MBTI();
+        user.displayQuestions();
+        
+
     }
+
+    
 }
 
