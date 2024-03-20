@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class MBTI{
-    String questions[]; // hii iam majida!!
+    String questions[]; 
     int answers[][];
     String MBTI;
     double Scores[];
